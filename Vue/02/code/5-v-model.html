@@ -41,12 +41,12 @@
         },
         data() {
           return {
-            count: 0,
+            count: 5,
           };
         },
-        template: `<div>ComponentA
-        {{count}}
-        {{cxr}}
+        template: `<div>ComponentA----
+        count:  {{count}}---
+        cxr:  {{cxr}}
         <button @click="handleClick">click</button>
         </div>`,
       });
@@ -54,8 +54,8 @@
       app = new Vue({
         el: `#app`,
         template: `
-        <div>{{msg}}
-            {{count}}
+        <div>{{msg}}----
+               count:{{count}}
             <ComponentA v-model="count"></ComponentA>
         </div>`,
         data: {

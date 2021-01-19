@@ -25,7 +25,7 @@
       // 1. 必须有根节点
       // 2. data 必须是个函数
       const ComponentB = {
-        template: `<div>ComponentB</div>`,
+        template: `<div>ComponentB222</div>`,
       };
 
       Vue.component("ComponentA", {
@@ -43,7 +43,7 @@
           };
         },
         template: `<div>ComponentA
-        {{count}}
+        ---{{count}}
         <button @click="handleClick">click</button>
             <ComponentB></ComponentB>
         </div>`,
