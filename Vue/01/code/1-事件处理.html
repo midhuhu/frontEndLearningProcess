@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        {{num}}
+        <button @click='handleclick(1,$event)'>点击</button>
+        <button @click.once="num++">点击</button>
+
+    </div>
+    <script>
+        app = new Vue({
+            el: "#app",
+            data: {
+                num: 0,
+                msg: "hello world",
+            },
+            methods: {
+                handleclick(n, e) {
+                    console.log('点击 ')
+                    console.log(e)
+                }
+            }
+
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+        {{count}}---{{double}}
+        <button @click="handleClick">点击</button>
+    </div>
+    <script>
+      app = new Vue({
+        el: "#app",
+        data: {
+            count:1,
+        },
+        methods:{
+            handleClick(e){
+                //递增count
+                return this.count++;
+            }
+        },
+        computed:{
+            double(){
+                //双倍count
+                return this.count*2;
+            }
+        }
+      });
+    </script>
+  </body>
+</html>
