@@ -16,7 +16,9 @@
         ],
         template: `
           <div class="photoItem">
-          <img src="imgsr" />{{imgsrc}}
+          <img src="file:///F:/学习资料/WEB前端/WEB仓库/web/Vue/02/code/1.png"/>
+          </p>
+          {{imgsrc}}
           </P>
           <span> {{imgname}} </span>
           </div>`,
@@ -25,12 +27,12 @@
       app = new Vue({
         el: `#app`,
         template: `
-        <div>{{msg}}
+        <div>
             <PhotoItem :imgsrc="imgsrc" :imgname="imgname"></PhotoItem>
         </div>`,
         data: {
-          imgsrc: "/src/1.png",
-          imgname:"home"
+          imgsrc: "file:///F:/学习资料/WEB前端/WEB仓库/web/Vue/02/code/1.png",
+          imgname:"1"
         },
       });
     </script>
