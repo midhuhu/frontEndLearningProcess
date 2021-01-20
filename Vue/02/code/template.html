@@ -9,31 +9,29 @@
   <body>
     <div id="app"></div>
     <script>
-      Vue.component("ComponentA", {
+      Vue.component("PhotoItem", {
         methods: {
-          handleClick() {
-           this.count++;
-          },
         },
         data() {
           return {
-            count: 0,
+            imgsrc: /src/1.png,
+            imgname:"home"
           };
         },
-        template: `<div>ComponentA
-        {{count}}
-        <button @click="handleClick">click</button>
+        template: `
+        <div class="photoItem">
+            <img src="imgsrc"></img>
+            <span>imgname</span>
         </div>`,
       });
 
       app = new Vue({
         el: `#app`,
         template: `
-        <div>{{msg}}
-            <ComponentA></ComponentA>
+        <div>
+            <PhotoItem></PhotoItem>
         </div>`,
         data: {
-          msg: "hello world",
         },
       });
     </script>

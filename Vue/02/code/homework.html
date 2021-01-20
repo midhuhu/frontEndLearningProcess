@@ -10,23 +10,27 @@
     <div id="app"></div>
     <script>
       Vue.component("PhotoItem", {
+        props:[
+          "imgsrc",
+          "imgname"
+        ],
         template: `
-        
           <div class="photoItem">
-  <img src="img/Home.png" />
-  <span> home </span>
-</div>
-        `,
+          <img src="imgsr" />{{imgsrc}}
+          </P>
+          <span> {{imgname}} </span>
+          </div>`,
       });
 
       app = new Vue({
         el: `#app`,
         template: `
         <div>{{msg}}
-            <ComponentA></ComponentA>
+            <PhotoItem :imgsrc="imgsrc" :imgname="imgname"></PhotoItem>
         </div>`,
         data: {
-          msg: "hello world",
+          imgsrc: "/src/1.png",
+          imgname:"home"
         },
       });
     </script>
