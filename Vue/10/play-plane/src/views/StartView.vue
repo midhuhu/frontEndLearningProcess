@@ -3,8 +3,8 @@
     <sprite :texture="startPageImg"> </sprite>
     <sprite
       :texture="startBtnImg"
-      x="226"
-      y="516"
+      x="230"
+      y="515"
       :interactive="true"
       @click="handleClick"
     >
@@ -15,6 +15,7 @@
 <script>
 import startPageImg from "../assets/start_page.jpg";
 import startBtnImg from "../assets/startBtn.png";
+
 
 export default {
   // eslint-disable-next-line no-unused-vars

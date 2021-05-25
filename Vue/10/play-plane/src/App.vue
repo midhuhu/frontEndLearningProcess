@@ -7,15 +7,18 @@
 <script>
 import StartView from "./views/StartView";
 import GameView from "./views/GameView";
+import EndView from "./views/EndView";
+// import Work from "./components/Work";
 import { computed, ref } from "vue";
 export default {
   name: "App",
   // eslint-disable-next-line vue/no-unused-components
-  components: { StartView, GameView },
+  components: { StartView, GameView, EndView },
 
   setup() {
     const currentViewName = ref("StartView");
     // const currentViewName = ref("GameView");
+    // const currentViewName = ref("EndView");
     // 依赖别的属性的属性
     const CurrentView = computed(() => {
       // eslint-disable-next-line no-debugger
@@ -23,6 +26,8 @@ export default {
         return StartView;
       } else if (currentViewName.value === "GameView") {
         return GameView;
+      } else if (currentViewName.value === "EndView") {
+        return EndView;
       }
     });
 

@@ -1,10 +1,10 @@
 <template>
   <container>
-    <sprite :texture="startPageImg"> </sprite>
+    <sprite :texture="endPageImg"> </sprite>
     <sprite
-      :texture="startBtnImg"
-      x="226"
-      y="516"
+      :texture="restartBtnImg"
+      x="255"
+      y="550"
       :interactive="true"
       @click="handleClick"
     >
@@ -13,8 +13,8 @@
 </template>
 
 <script>
-import startPageImg from "../assets/start_page.jpg";
-import startBtnImg from "../assets/startBtn.png";
+import endPageImg from "../assets/end_page.jpg";
+import restartBtnImg from "../assets/restartBtn.png";
 
 export default {
   // eslint-disable-next-line no-unused-vars
@@ -26,8 +26,8 @@ export default {
 
     return {
       handleClick,
-      startPageImg,
-      startBtnImg,
+      endPageImg,
+      restartBtnImg,
     };
   },
 };
