@@ -51,8 +51,6 @@
       </option>
     </select>
     <br />
-    <br />
-    <br />
     <span>selected: {{ selected3 }}</span>
     <br />
     <input v-model.trim="msg" />
