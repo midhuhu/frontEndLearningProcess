@@ -1,0 +1,36 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <script src="https://unpkg.com/vue"></script>
+        <link rel="stylesheet" type="text/css" href="./index3.css">
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.14.1/lodash.min.js"></script>
+        <title>Document</title>
+    </head>
+    <body>
+        <div id="filp-list-demo">
+            <button v-on:click="shuffle">随机排列</button>
+            <transition-group name='flip-list' tag='ul'>
+                <li v-for="item in items" v-bind:key="item">
+                    {{item}}
+                </li>
+            </transition-group>
+        </div>
+        <script>
+            new Vue({
+                el:'#filp-list-demo',
+                data:{
+                    items:[1,2,3,4]
+                },
+                methods:{
+                    shuffle(){
+                        this.items=_.shuffle(this.items)
+                    }
+                    // _.shuffle创建一个打乱顺序的数组，使用Fisher–Yates shuffle洗牌算法
+                }
+            })
+        </script>
+    </body>
+</html>

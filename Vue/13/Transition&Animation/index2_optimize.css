@@ -1,0 +1,15 @@
+.list-item {
+  transition: all 1s;
+  display: inline-block;
+  margin-right: 10px;
+}
+.list-enter,
+.list-leave-to {
+  opacity: 0;
+  transform: translateY(30px);
+}
+.list-leave-active {
+  position: absolute;
+}
+
+/* 优化移动过渡 */

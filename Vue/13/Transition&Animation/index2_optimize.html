@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Vue Component Blog Post Example</title>
+        <script src="https://unpkg.com/vue"></script>
+        <link rel="stylesheet" type="text/css" href="/style.css" />
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.14.1/lodash.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="./index2_optimize.css">
+    </head>
+    <body>
+        <div id="list-demo" class="demo">
+            <button v-on:click="add">Add</button>
+            <button v-on:click="remove">Remove</button>
+            <transition-group name="list" tag="p">
+                <span v-for="item in items" v-bind:key="item" class="list-item">
+                    {{ item }}
+                </span>
+            </transition-group>
+        </div>
+        <script>
+            new Vue({
+                el: '#list-demo',
+                data: {
+                    items: [1,2,3,4,5,6,7,8,9],
+                    nextNum: 10
+                },
+                methods: {
+                    randomIndex: function () {
+                    return Math.floor(Math.random() * this.items.length)
+                    },
+                    add: function () {
+                    this.items.splice(this.randomIndex(), 0, this.nextNum++)
+                    console.log(this.items)
+                    },
+                    remove: function () {
+                    this.items.splice(this.randomIndex(), 1)
+                    },
+                }
+            })
+        </script>
+    </body>
+</html>
+
+
+<!--
+    arrayObject.splice(index,howmany,item1,.....,itemX)
+    参数	描述
+    index	必需。整数，规定添加/删除项目的位置，使用负数可从数组结尾处规定位置。
+    howmany	必需。要删除的项目数量。如果设置为 0，则不会删除项目。
+    item1, ..., itemX	可选。向数组添加的新项目。
+-->
