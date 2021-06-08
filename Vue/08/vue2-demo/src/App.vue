@@ -1,19 +1,27 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <img alt="Vue logo" src="./assets/logo.png" />
+    <br />
+    <custom-input v-model="searchText"></custom-input>
+    <br />
+    <span>input:{{ searchText }}</span>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import CustomInput from "./components/CustomInput.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    CustomInput,
+  },
+  data() {
+    return {
+      searchText: "",
+    };
+  },
+};
 </script>
 
 <style>
