@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+        /* 优先级由大到小
+
+            style 行内 1000
+            >
+            # id 100
+            >
+            . 类 10
+            >
+            img 标签 1
+            >
+            * 通用 0
+
+            */
+
+        /* id样式 */
+        #p1{
+            color: blue;
+        }
+        /* 类样式 */
+        .p{
+            color: red;
+        }
+        /* 标签样式 */
+        p{
+            color: yellow;
+        }
+        /* 通用样式 */
+        *{
+            color: green;
+        }
+    </style>
+        <title>Document</title>
+    </head>
+    <body>
+        <!-- 行内样式 -->
+        <!-- <p class="p" id="p1" style="color:orange;"> -->
+        <p class="p" id="p1">
+            猜猜我是什么颜色
+        </p>
+    </body>
+</html>

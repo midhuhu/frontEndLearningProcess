@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            body{
+                margin: 0;
+            }
+
+            .a{
+                width: 20%;
+                background-color: green;
+            }
+            .b{
+                width: 50%;
+                background-color: indianred;
+            }
+            .c{
+                width: 30%;
+                background-color: orange;
+            }
+            .d{
+                width: 100%;
+                height: 200px;
+                /* clear: left; */
+                /* overflow: auto; */
+                background-color: purple;
+            }
+            .e{
+                width: 100%;
+                /* height: 100px; */
+                /* overflow: auto; */
+            }
+            .a,.b,.c{
+                height: 100px;
+                float: left;
+            }
+        </style>
+    </head>
+    <body>
+        <p>横向排列效果</p>
+        <!--
+            1、添加外层div 设置不浮动，设置高度和内层div相同
+            2、在底下的div 添加overflow: auto;
+            3、添加外层div 设置不浮动，设置overflow: auto;
+            4、在底下的div 添加clear: left;
+        -->
+        <div class="e">
+            <div class="a"></div>
+            <div class="b"></div>
+            <div class="c"></div>
+        </div>
+
+        <div class="d"></div>
+    </body>
+</html>

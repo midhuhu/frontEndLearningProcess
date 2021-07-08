@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            *{
+                margin: 0;
+            }
+            .title{
+                width: 100%;
+                height: 80px;
+                background-color: bisque;
+                text-align: center;
+                line-height: 80px;
+            }
+            .box{
+                width: 800px;
+                overflow: auto;
+                /* 上 右 下 左 */
+                margin: auto;
+            }
+            .div1{
+                /* width: 150px;height: 150px; */
+                float: left;
+                margin: 25px;
+                border: 5px;
+                border-color: black;
+                border-style: solid;
+                padding: 20px;
+            }
+            /* .div1 img{
+                padding: 20px;
+            } */
+        </style>
+    </head>
+
+    <!--  内容  ->  填充  ->  边框 -> 边距 -->
+    <!-- content  padding   border   margin -->
+    <body>
+        <div class="title">图片欣赏</div>
+        <div class="box">
+            <div class="div1">
+                <img src="img/01.webp"><br>
+                测试文本内容
+            </div>
+            <div class="div1">
+                <img src="img/02.webp"><br>
+                测试文本内容
+            </div>
+            <div class="div1">
+                <img src="img/03.webp"><br>
+                测试文本内容
+            </div>
+            <div class="div1">
+                <img src="img/04.webp"><br>
+                测试文本内容
+            </div>
+        </div>
+    </body>
+</html>

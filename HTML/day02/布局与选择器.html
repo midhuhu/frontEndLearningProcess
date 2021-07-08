@@ -4,25 +4,49 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
+        <style>
+            /* 标签选择器 */
+            body{
+                margin: 0;
+            }
+            #head img{
+                width: 100%;
+            }
+            /* ID选择器 */
+            #body{
+                height: 80px;
+                line-height: 80px;
+                text-align:center;
+                background-color: white;
+            }
+            #foot{
+                height: 40px;
+                line-height: 40px;
+                text-align:center;
+            }
+            /* 类别选择器 */
+            .a-nav{
+                text-decoration: none;
+                color: #000;
+                margin: 0 15px;
+            }
+        </style>
+        <title>首页</title>
     </head>
-    <body style="margin: 0;">
+    <body>
         <div id="head">
-            <img src="../day01/img/02.png" style="width: 100%;">
+            <img src="../day01/img/02.png">
         </div>
-        <div id="body" style="height: 80px;line-height: 80px;text-align:
-            center;background-color: white;">
-            <a href="#">首页</a>
-            <a href="#">创新天地</a>
-            <a href="#">公司新闻</a>
-            <a href="#">青年动态</a>
-            <a href="#">关于我们</a>
-            <a href="#">加入我们</a>
-            <a href="#">商务合作</a>
-
+        <div id="body">
+            <a href="#" class="a-nav">首页</a>
+            <a href="#" class="a-nav">创新天地</a>
+            <a href="#" class="a-nav">公司新闻</a>
+            <a href="#" class="a-nav">青年动态</a>
+            <a href="#" class="a-nav">关于我们</a>
+            <a href="#" class="a-nav">加入我们</a>
+            <a href="#" class="a-nav">商务合作</a>
         </div>
-        <div id="foot" style="height: 40px;line-height: 40px;text-align:
-            center;">
+        <div id="foot">
             版权所有：京公网安备11000002000001号 京ICP证030173号 ©2021 Baidu
         </div>
     </body>
