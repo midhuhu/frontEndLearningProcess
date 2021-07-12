@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>布局中的定位1</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            .box{
+                width: 950px;
+                height: 600px;
+                background: url("img/map.png") no-repeat;
+                background-size: contain;
+                position: relative;
+            }
+            .map1{
+                position: absolute;
+                left: 170px;
+                top: 150px;
+            }
+            .map2{
+                position: absolute;
+                left: 720px;
+                top: 200px;
+            }
+            .point{
+                /* display: inline-block; */
+                float: left;
+                width: 10px;
+                height: 10px;
+                border-radius: 5px;
+                background: red;
+            }
+            .info{
+                float: left;
+                color: white;
+                font-size: 14px;
+                line-height: 10px;
+                margin-left: 5px;
+            }
+    </style>
+    </head>
+    <!-- position: absolute;  绝对定位 相对于 position: relative （xxxxxx）;的父元素确定 -->
+    <body>
+        <div class="box">
+            <div class="map1">
+                <span class="point"></span>
+                <span class="info">加拿大</span>
+            </div>
+            <div class="map2">
+                <span class="point"></span>
+                <span class="info">中国</span>
+            </div>
+        </div>
+    </body>
+</html>

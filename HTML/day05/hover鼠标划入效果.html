@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>hover鼠标划入效果</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            #container{
+                width: 1000px;
+                overflow: auto;
+                margin: auto;
+            }
+            #container .subject{
+                float: left;
+                width: 200px;
+                height: 360px;
+                text-align: center;
+                padding: 0 15px;
+                margin: 10px;
+                background:#efefef;
+                position: relative;
+            }
+            #container:hover .subject{
+                width:180px;
+            }
+            #container .subject:hover{
+                width: 260px;
+                background: #ababab;
+            }
+            #container .subject img{
+                margin: 40px 20px;
+            }
+            #container .subject .title{
+                font:bold 18px "微软雅黑";
+            }
+            #container .subject .content{
+                padding: 20px 0;
+                font-size: 14px;
+                color: #666;
+            }
+            #container .subject a{
+                text-decoration: none;
+                font-size: 12px;
+                width: 100px;
+                height: 30px;
+                line-height: 30px;
+                color: white;
+                background: #045899;
+                display: block;
+                position: absolute;
+                bottom: 20px;
+                left: 50%;
+                margin-left: -50px;
+            }
+            #container .subject a:hover{
+                background: red;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="container">
+            <div class="subject">
+                <img src="img/打卡.png">
+                <p class="title">Plumber</p>
+                <div class="content">
+                    本套视频是由千锋教育 HTML5 学院推出的 “H5大前端”，
+                    你可以从零开始，一步步的掌握前端开发的各项相关技能。
+                </div>
+                <a href="#">LearnMore</a>
+            </div>
+            <div class="subject">
+                <img src="img/定位.png">
+                <p class="title">Plumber</p>
+                <div class="content">
+                    本套视频是由千锋教育 HTML5 学院推出的 “H5大前端”，
+                    你可以从零开始，一步步的掌握前端开发的各项相关技能。
+                </div>
+                <a href="#">LearnMore</a>
+            </div>
+            <div class="subject">
+                <img src="img/秒杀.png">
+                <p class="title">Plumber</p>
+                <div class="content">
+                    本套视频是由千锋教育 HTML5 学院推出的 “H5大前端”，
+                    你可以从零开始，一步步的掌握前端开发的各项相关技能。
+                </div>
+                <a href="#">LearnMore</a>
+            </div>
+            <div class="subject">
+                <img src="img/切换.png">
+                <p class="title">Plumber</p>
+                <div class="content">
+                    本套视频是由千锋教育 HTML5 学院推出的 “H5大前端”，
+                    你可以从零开始，一步步的掌握前端开发的各项相关技能。
+                </div>
+                <a href="#">LearnMore</a>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>语义化标签</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            header,footer{
+                height: 50px;
+                background: #44546A;
+                text-align: center;
+                color: white;
+                line-height: 50px;
+            }
+            main{
+                overflow:auto
+            }
+            nav,section,aside{
+                float: left;
+            }
+            main nav{
+                width: 25%;
+            }
+            /* box-sizing  保持外层元素大小不变 */
+            main section{
+                width: 50%;
+                padding: 0 15px;
+                box-sizing:border-box;
+            }
+            main aside{
+                width: 25%;
+            }
+            p{
+                height: 30px;
+                text-align: center;
+                margin: 10px 0;
+                color: white;
+                background-color: #7c8ba0;
+            }
+        </style>
+    </head>
+    <body>
+        <header>Header</header>
+        <main>
+            <nav>
+                nav
+                <p>Link</p>
+                <p>Link</p>
+                <p>Link</p>
+                <p>Link</p>
+                <p>Link</p>
+                <p>Link</p>
+                <p>Link</p>
+                <p>Link</p>
+            </nav>
+            <section>
+                <article>
+                    article
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                </article>
+                <article>
+                    article
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                </article>
+                <article>
+                    article
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                </article>
+            </section>
+
+            <aside>
+                Aside
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+                <p></p>
+            </aside>
+        </main>
+        <footer>footer</footer>
+    </body>
+</html>

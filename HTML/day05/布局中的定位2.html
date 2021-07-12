@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>布局中的定位2</title>
+        <style>
+            body{
+                height: 2500px;
+                padding: 0;
+                margin: 0;
+            }
+
+            #div1{
+                width: 100%;
+                height: 110px;
+                text-align: center;
+                background: red;
+                position: fixed;
+                left: 0;
+                top: 0;
+            }
+        </style>
+    </head>
+    <!-- position: fixed;  固定定位 基于浏览器窗口确定 -->
+    <body>
+        <div id="div1">
+            顶部信息栏
+        </div>
+        <div>
+            <img src="img/map.png">
+        </div>
+    </body>
+</html>
