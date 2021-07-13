@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <style>
+        *{
+            margin: 0;padding: 0;
+        }
+        header{
+            position:fixed;
+            width: 100%;
+            height: 50px;
+            background-color: blueviolet;
+        }
+        header img{
+            width: 50px;
+            float: left;
+            margin-left: 30px;
+        }
+        header .nav-list{
+            display: block;
+            float: right;
+            margin-right: 20px;
+        }
+        header .nav-list a{
+            color: white;
+            font-size: 18px;
+            line-height: 50px;
+            margin-right: 20px;
+            float: left;
+        }
+        header .menu{
+            display: none;
+            float: right;
+            margin-right: 20px;
+            color: white;
+            font-size: 18px;
+            line-height: 50px;
+            cursor: pointer;
+        }
+        header .menu:hover .nav-list{
+            display: block;
+        }
+        header .menu .nav-list{
+            width: 100%;
+            position: fixed;
+            top: 50px;
+            left: 0;
+            display: none;
+        }
+        header .menu .nav-list a{
+            text-align: center;
+            height: 50px;
+            width: 100%;
+            display: block;
+            background-color: rgba(0, 0, 0, 0.6);
+            border-bottom: 1px dotted white;
+        }
+        #banner{
+            background: url("img/06.png");
+            height: 400px;
+            width: 100%;
+            margin-bottom: 20px;
+            background-position: center center;
+        }
+        .product-list li{
+            box-sizing: border-box;
+            width: 16.5%;
+            padding: 0 10px;
+            float: left;
+        }
+        .product-list li img{
+            width: 100%;
+            border-radius: 5px;
+            box-shadow: 0 0 6px 0 #666;
+        }
+        @media screen and (max-width:1400px) {
+            .product-list li{
+                width: 20%;
+            }
+        }
+
+        @media screen and (max-width:1024px) {
+            .product-list li{
+                width: 25%;
+            }
+        }
+        @media screen and (max-width:768px) {
+            .product-list li{
+                width: 33%;
+            }
+            header .menu{
+                display: block;
+            }
+            header .nav-list{
+                display: none;
+            }
+        }
+        @media screen and (max-width:640px){
+            .product-list li{
+                width: 50%;
+            }
+        }
+        li{
+            list-style: none;
+        }
+        a{
+            cursor: pointer;
+        }
+    </style>
+    <body>
+        <header>
+            <img src="img/定位.png">
+            <div class="menu">
+                menu
+                <nav class="nav-list">
+                    <a>文章</a>
+                    <a>美图</a>
+                    <a>杂志</a>
+                    <a>散文</a>
+                    <a>生活</a>
+                </nav>
+            </div>
+            <nav class="nav-list">
+                <a>文章</a>
+                <a>美图</a>
+                <a>杂志</a>
+                <a>散文</a>
+                <a>生活</a>
+            </nav>
+        </header>
+        <div id="banner"></div>
+        <ul class="product-list">
+            <li>
+                <div>
+                    <img src="img/02.webp">
+                </div>
+                <p>可可摄影展</p>
+                <p>
+                    <span>2021年</span>
+                    <sapn>可可</sapn>
+                </p>
+            </li>
+            <li>
+                <div>
+                    <img src="img/02.webp">
+                </div>
+                <p>可可摄影展</p>
+                <p>
+                    <span>2021年</span>
+                    <sapn>可可</sapn>
+                </p>
+            </li>
+            <li>
+                <div>
+                    <img src="img/02.webp">
+                </div>
+                <p>可可摄影展</p>
+                <p>
+                    <span>2021年</span>
+                    <sapn>可可</sapn>
+                </p>
+            </li>
+            <li>
+                <div>
+                    <img src="img/02.webp">
+                </div>
+                <p>可可摄影展</p>
+                <p>
+                    <span>2021年</span>
+                    <sapn>可可</sapn>
+                </p>
+            </li>
+            <li>
+                <div>
+                    <img src="img/02.webp">
+                </div>
+                <p>可可摄影展</p>
+                <p>
+                    <span>2021年</span>
+                    <sapn>可可</sapn>
+                </p>
+            </li>
+            <li>
+                <div>
+                    <img src="img/02.webp">
+                </div>
+                <p>可可摄影展</p>
+                <p>
+                    <span>2021年</span>
+                    <sapn>可可</sapn>
+                </p>
+            </li>
+            <li>
+                <div>
+                    <img src="img/02.webp">
+                </div>
+                <p>可可摄影展</p>
+                <p>
+                    <span>2021年</span>
+                    <sapn>可可</sapn>
+                </p>
+            </li>
+            <li>
+                <div>
+                    <img src="img/02.webp">
+                </div>
+                <p>可可摄影展</p>
+                <p>
+                    <span>2021年</span>
+                    <sapn>可可</sapn>
+                </p>
+            </li>
+        </ul>
+    </body>
+</html>

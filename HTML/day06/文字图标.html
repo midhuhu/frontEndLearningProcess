@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <link rel="stylesheet" href="font/iconfont.css">
+    <script src="font/iconfont.js"></script>
+    <style>
+        *{
+            margin: 0;padding: 0;
+        }
+        .icon {
+            width: 1em;
+            height: 1em;
+            vertical-align: -0.15em;
+            fill: currentColor;
+            overflow: hidden;
+            font-size: 20px;
+        }
+        ul{
+            list-style: none;
+            color: white;
+            background: #555;
+            width: 250px;
+            margin: 50px;
+        }
+        ul li{
+            height: 45px;
+            line-height: 45px;
+            padding-left: 10px;
+            font-size: 10px;
+            font-weight: bold;
+        }
+        ul li:first-child{
+            background: red;
+        }
+        ul li span{
+            padding-right: 10px;
+            font-weight: normal;
+        }
+        .iconfont{
+            font-size: 16px;
+        }
+    </style>
+    <body>
+        <ul>
+            <li><span class="iconfont icon-caidan">&#xe707</span>商品分类</li>
+            <li><span class="iconfont icon-caidan">&#xe702</span>网络</li>
+            <li><span class="iconfont icon-caidan">&#xe741</span>书本</li>
+            <li><span class="iconfont icon-caidan">&#xe742</span>用户管理</li>
+            <li><span class="iconfont icon-caidan">&#xe743</span>服装</li>
+            <li>
+                <svg class="icon" aria-hidden="true">
+                    <use xlink:href="#icon-apparel"></use>
+                </svg>设置
+            </li>
+        </ul>
+    </body>
+</html>

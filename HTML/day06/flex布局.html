@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <style>
+        /*
+        justify-content  主轴对齐
+        align-items  交叉轴对齐
+        */
+
+        .box{
+            width: 500px;
+            height: 200px;
+            background-color: #555;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            box-sizing: border-box;
+            padding: 10px 0;
+        }
+        .box-left{
+            width: 150px;
+            background-color: orange;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            font-size: 24px;
+            font-weight: 800;
+        }
+        .box-right{
+            width: 300px;
+            background-color: yellow;
+            box-sizing: border-box;
+            padding: 10px 5px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    </style>
+    <body>
+        <div class="box">
+            <div class="box-left">
+                <span>八月</span>
+                <span>31日</span>
+            </div>
+            <div class="box-right">
+                <span>今日大事件</span>
+                <span>著名主播竟然当场吃粑粑，数千万用户在线观看</span>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <style>
+        .box{
+            width: 300px; height: 300px;
+            border: 1px solid black;
+            font-size: 18px;
+            line-height: 300px;
+            text-align: center;
+            transition: 2s;
+            transform-style: preserve-3d;
+            margin-top: 100px;
+            margin-left: 100px;
+        }
+        .box:hover{
+            transform: rotateX(-40deg) rotateY(150deg);
+        }
+        .box div{
+            width: 300px;height: 300px;
+            position: absolute;
+            left: 0; top: 0;
+            transition: 2s;
+        }
+        .box .flat1{
+            background-color: red;
+            transform: rotateX(90deg)  translateZ(-150px) ;
+        }
+        .box .flat2{
+            background-color: yellow;
+            transform: rotateX(-90deg) translateZ(-150px) ;
+        }
+        .box .flat3{
+            background-color: blue;
+            transform: rotateY(90deg)  translateZ(150px);
+        }
+        .box .flat4{
+            background-color: gray;
+            transform: rotateY(90deg)  translateZ(-150px) ;
+        }
+        .box .flat5{
+            background-color: orange;
+            transform: translateZ(150px);
+        }
+        .box .flat6{
+            background-color: cyan;
+            transform:translateZ(-150px);
+        }
+
+    </style>
+    <body>
+        <div class="box">
+            <div class="flat1"></div>
+            <div class="flat2"></div>
+            <div class="flat3"></div>
+            <div class="flat4"></div>
+            <div class="flat5"></div>
+            <div class="flat6"></div>
+        </div>
+    </body>
+</html>

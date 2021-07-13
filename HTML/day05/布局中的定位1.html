@@ -19,41 +19,49 @@
             }
             .map1{
                 position: absolute;
-                left: 170px;
-                top: 150px;
-            }
-            .map2{
-                position: absolute;
                 left: 720px;
                 top: 200px;
-            }
-            .point{
-                /* display: inline-block; */
-                float: left;
                 width: 10px;
                 height: 10px;
-                border-radius: 5px;
+                display: block;
                 background: red;
+                border-radius: 50%;
             }
-            .info{
-                float: left;
-                color: white;
-                font-size: 14px;
-                line-height: 10px;
-                margin-left: 5px;
+            .ripple-1{
+                animation: ripple 2s 150ms infinite;
             }
+            .ripple-2{
+                animation: ripple 2s 450ms infinite;
+            }
+            .ripple-3{
+                animation: ripple 2s 750ms infinite;
+            }
+            .ripple-base{
+                width: 120px;
+                height: 120px;
+                border: 2px solid red;
+                border-radius: 50%;
+                transform: scale(0.01);
+                position: absolute;
+                left: -57px;
+                top: -57px;
+            }
+            @keyframes ripple {
+                100%{
+                    opacity: 0;
+                    transform: scale(1);
+                }
+            }
+
     </style>
     </head>
     <!-- position: absolute;  绝对定位 相对于 position: relative （xxxxxx）;的父元素确定 -->
     <body>
         <div class="box">
             <div class="map1">
-                <span class="point"></span>
-                <span class="info">加拿大</span>
-            </div>
-            <div class="map2">
-                <span class="point"></span>
-                <span class="info">中国</span>
+                <div class="ripple-base ripple-1"></div>
+                <div class="ripple-base ripple-2"></div>
+                <div class="ripple-base ripple-3"></div>
             </div>
         </div>
     </body>
