@@ -1,102 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <link rel="stylesheet" href="css/common.css">
-    </head>
-    <style>
-        #banner{
-
-        }
-        #banner .banner-list{
-            width: 100%;
-            height: 469px;
-            position: relative;
-        }
-        #banner .banner-list li{
-            width: 100%;
-            height: 100%;
-            background: center 0 no-repeat;
-            position: absolute;
-            left: 0;
-            top: 0;
-            opacity: 0;
-            z-index: 1;
-        }
-        #banner .banner-list li.active{
-            opacity: 1;
-            z-index: 10;
-        }
-        #banner .banner-btn{
-            position: absolute;
-            bottom: 19px;
-            left: 100px;
-            font-size: 0;
-            text-align: center;
-            width: 100%;
-        }
-        #banner .banner-btn li{
-            display: inline-block;
-            width: 12px;
-            height: 12px;
-            border-radius: 6px;
-            border: 2px solid white;
-            box-sizing: border-box;
-            z-index: 20;
-        }
-    </style>
-    <body>
-        <div id="head" class="contrainer">
-            <div class="head-logo l">
-                <a href="#">
-                    <img src="images/logo.png" alt="LOGO">
-                </a>
-            </div>
-            <ul class="head-menu r">
-                <li>
-                    <a href="#">首页</a>
-                </li>
-                <li>
-                    <a href="#">关于我们</a>
-                </li>
-                <li>
-                    <a href="#">新闻</a>
-                </li>
-                <li>
-                    <a href="#">简介</a>
-                </li>
-                <li>
-                    <a href="#">大事记</a>
-                </li>
-                <li>
-                    <a href="#">联系方式</a>
-                </li>
-            </ul>
-        </div>
-        <div id="banner" class="contrainer-fluid">
-            <ul class="banner-list">
-                <li class="active" style="background-image:
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/page.css">
+</head>
+<body>
+<div id="head" class="contrainer">
+    <div class="head-logo l">
+        <a href="#">
+            <img src="images/logo.png" alt="LOGO">
+        </a>
+    </div>
+    <ul class="head-menu r">
+        <li>
+            <a href="#">首 页</a>
+        </li>
+        <li>
+            <a href="#">关于我们</a>
+        </li>
+        <li>
+            <a href="#">新 闻</a>
+        </li>
+        <li>
+            <a href="#">简 介</a>
+        </li>
+        <li>
+            <a href="#">大事记</a>
+        </li>
+        <li>
+            <a href="#">联系方式</a>
+        </li>
+    </ul>
+</div>
+<div id="banner" class="contrainer-fluid">
+    <ul class="banner-list">
+        <li class="active" style="background-image:
                     url(images/banner.png);">
-                    <a href="#"></a>
+            <a href="#"></a>
+        </li>
+        <li style="background-image: url(images/banner.png);">
+            <a href="#"></a>
+        </li>
+        <li style="background-image: url(images/banner.png);">
+            <a href="#"></a>
+        </li>
+    </ul>
+    <ol class="banner-btn">
+        <li class="active"></li>
+        <li></li>
+        <li></li>
+    </ol>
+</div>
+<div id="service" class="contrainer">
+    <div class="area_title">
+        <h2>服务范围</h2>
+        <p>SERVICE FROM</p>
+    </div>
+    <ul class="service_list">
+        <li>
+            <div></div>
+            <h3>1.web design</h3>
+            <p>
+                企业品牌网站设计/手机网站制作
+                <br>
+                动画网站创意设计
+            </p>
+        </li>
+        <li>
+            <div></div>
+            <h3>2.graphic design</h3>
+            <p>
+                标志logo设计/产品宣传册设计
+                <br>
+                企业广告/海报设计
+            </p>
+        </li>
+        <li>
+            <div></div>
+            <h3>3.e-business plan</h3>
+            <p>
+                淘宝/天猫装修设计及运营推广
+                <br>
+                企业微博、微信营销
+            </p>
+        </li>
+        <li>
+            <div></div>
+            <h3>4.mailboxagents</h3>
+            <p>
+                腾讯/网易企业邮箱品牌代理
+                <br>
+                个性化邮箱定制开发
+            </p>
+        </li>
+    </ul>
+</div>
+<div id="case" class="contrainer-fluid">
+    <div class="contrainer">
+        <div class="area_title">
+            <h2>客户案例</h2>
+            <p>CLIENT FROM</p>
+        </div>
+        <ul class="case_list clear">
+            <li>
+                <a href="#"><img src="./images/b1.png"></a>
+            </li>
+            <li>
+                <a href="#"><img src="./images/b2.png"></a>
+            </li>
+            <li>
+                <a href="#"><img src="./images/b3.png"></a>
+            </li>
+        </ul>
+        <div class="case_btn">
+            <a href="#">VIEW MORE</a>
+        </div>
+    </div>
+</div>
+<div id="news" class="contrainer">
+    <div class="area_title">
+        <h2>新闻中心</h2>
+        <p>NEWS FROM</p>
+    </div>
+    <dl>
+        <dt class="l">
+            <img src="./images/xs1.png" alt="">
+        </dt>
+        <dd class="l">
+            <ul class="news_list">
+                <li>
+                    <div class="news_date l">
+                        <i>09</i>
+                        <span>Jan</span>
+                    </div>
+                    <div class="news_text l">
+                        <h3><a href="#">网站排名进入前三的技巧说明</a></h3>
+                        <p>很多客户都会纳闷为什么自己的网站老是优化不到搜索引擎
+                            首页，更不用说进首页前三了。那么网站优...</p>
+                    </div>
                 </li>
-                <li style="background-image: url(images/banner.png);">
-                    <a href="#"></a>
+                <li>
+                    <div class="news_date l">
+                        <i>09</i>
+                        <span>Jan</span>
+                    </div>
+                    <div class="news_text l">
+                        <h3><a href="#">网站排名进入前三的技巧说明</a></h3>
+                        <p>很多客户都会纳闷为什么自己的网站老是优化不到搜索引擎
+                            首页，更不用说进首页前三了。那么网站优...</p>
+                    </div>
                 </li>
-                <li style="background-image: url(images/banner.png);">
-                    <a href="#"></a>
+                <li>
+                    <div class="news_date l">
+                        <i>09</i>
+                        <span>Jan</span>
+                    </div>
+                    <div class="news_text l">
+                        <h3><a href="#">网站排名进入前三的技巧说明</a></h3>
+                        <p>很多客户都会纳闷为什么自己的网站老是优化不到搜索引擎
+                            首页，更不用说进首页前三了。那么网站优...</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="news_date l">
+                        <i>09</i>
+                        <span>Jan</span>
+                    </div>
+                    <div class="news_text l">
+                        <h3><a href="#">网站排名进入前三的技巧说明</a></h3>
+                        <p>很多客户都会纳闷为什么自己的网站老是优化不到搜索引擎
+                            首页，更不用说进首页前三了。那么网站优...</p>
+                    </div>
                 </li>
             </ul>
-            <ol class="banner-btn">
-                <li></li>
-                <li></li>
-                <li></li>
-            </ol>
+        </dd>
+    </dl>
+</div>
+<div id="foot" class="container-fluid">
+    <div class="container">
+        <p class="l">Copyright 2006- 2014 Bowenshangmei Culture All Rights Reserved</p>
+        <div class="r">
+            <a href="#">Home</a> | <a href="#">About</a> | <a href="#">Portfolio</a> | <a href="#">Contact</a>
         </div>
-        <footer>
-
-        </footer>
-    </body>
+    </div>
+</div>
+</body>
 </html>

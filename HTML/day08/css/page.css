@@ -1,0 +1,217 @@
+#banner {
+    position: relative;
+}
+
+#banner .banner-list {
+    width: 100%;
+    height: 469px;
+    position: relative;
+}
+
+#banner .banner-list li {
+    width: 100%;
+    height: 100%;
+    background: center 0 no-repeat;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    z-index: 1;
+}
+
+#banner .banner-list li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+#banner .banner-list li.active {
+    opacity: 1;
+    z-index: 10;
+}
+
+#banner .banner-btn {
+    position: absolute;
+    bottom: 19px;
+    font-size: 0;
+    text-align: center;
+    width: 100%;
+    z-index: 20;
+}
+
+#banner .banner-btn li {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 6px;
+    border: 2px solid white;
+    box-sizing: border-box;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+#banner .banner-btn li.active {
+    background-color: white;
+}
+
+#service {
+    overflow: hidden;
+    min-height: 407px
+}
+
+#service .service_list {
+    text-align: center;
+    margin-top: 34px;
+}
+
+#service .service_list li {
+    float: left;
+    width: 250px;
+    margin: 0 10px;
+}
+
+#service .service_list div {
+    width: 102px;
+    height: 102px;
+    margin: 0 auto
+}
+
+#service .service_list li:nth-of-type(1) div {
+    background-image: url(../images/web1.png);
+}
+
+#service .service_list li:nth-of-type(2) div {
+    background-image: url(../images/mail1.png);
+}
+
+#service .service_list li:nth-of-type(3) div {
+    background-image: url(../images/graphic1.png);
+}
+
+#service .service_list li:nth-of-type(4) div {
+    background-image: url(../images/e-bussiness1.png);
+}
+
+#service .service_list h3 {
+    font-size: 18px;
+    color: #434343;
+    line-height: 36px;
+    margin-top: 25px;
+}
+
+#service .service_list p {
+    font-size: 14px;
+    color: #6D6D6D;
+    line-height: 22px;
+}
+
+#case {
+    background: #f8f8f8;
+}
+
+#case .contrainer {
+    min-height: 450px;
+    overflow: hidden;
+}
+
+#case .area_title h2 {
+    color: #66C5B4;
+}
+
+#case .case_list {
+    margin-top: 28px;
+    width: 100%;
+}
+
+#case .case_list li {
+    float: left;
+    width: 340px;
+    margin: 0 10px;
+}
+
+#case .case_btn {
+    width: 176px;
+    height: 37px;
+    background: #66C5B4;
+    margin: 0 auto;
+    border-radius: 25px;
+    line-height: 37px;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 36px;
+}
+
+#case .case_btn a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+
+#news {
+    min-height: 450px;
+    overflow: hidden;
+}
+
+#news dl {
+    margin-top: 48px;
+}
+
+#news dt {
+    width: 234px;
+}
+
+#news dd {
+    width: 846px;
+}
+
+#news .news_list {
+    width: 100%;
+}
+
+#news .news_list li {
+    float: left;
+    width: 50%;
+    margin-bottom: 48px;
+}
+
+#news .news_date {
+    width: 71px;
+    height: 70px;
+    border-right: 1px solid #DCDCDC;
+    text-align: center;
+}
+
+#news .news_date i {
+    color: #66C5B4;
+    font-size: 39px;
+    display: block;
+    font-weight: bold;
+}
+
+#news .news_date span {
+    color: #999999;
+    font-size: 20px;
+    line-height: 36px;
+}
+
+#news .news_text {
+    width: 310px;
+    margin-left: 20px;
+}
+
+#news .news_text h3 {
+    font-size: 14px;
+}
+
+#news .news_text h3 a {
+    color: #3F3F3F;
+}
+
+#news .news_text p {
+    color: #A4A4A4;
+    font-size: 12px;
+    line-height: 21px;
+    margin-top: 17px;
+}

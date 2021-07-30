@@ -5,16 +5,6 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
-        <script>
-            function showB(){
-                console.log(1)
-                document.getElementById("menu").style.left=0;
-            }
-            function showA(){
-                console.log(2)
-                document.getElementById("menu").style.left = "-375px";
-            }
-    </script>
     </head>
     <style>
         * {
@@ -25,23 +15,28 @@
             width: 300px;
             height: 812px;
             position: absolute;
-            left: -375px;
+            /*left: -375px;*/
             display: flex;
             flex-direction: column;
             text-align: center;
             background-color:aquamarine;
+            -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
             transition: left 200ms linear;
         }
-        /* .app-menu-open .app-menu {
-            left: 0px;
-            transition: left 300ms linear;
-        } */
 
         .header{
             width: 375px;
             height: 60px;
             background-color: bisque;
             display: flex;
+        }
+        .header:hover +.app-menu {
+            /*存在延时*/
+            /*left: 0;*/
+            -webkit-transform: none;
+            transform: none;
+            transition: transform 300ms linear;
         }
         .menu-icon{
             display: flex;
@@ -66,16 +61,16 @@
     </style>
     <body>
         <div class="layout">
+            <div class="header">
+                <div class="menu-icon">
+                    <img src="img/菜单.png">
+                </div>
+            </div>
             <div id="menu" class="app-menu">
                 <p>桌面B</p>
             </div>
-            <div class="header">
-                <div class="menu-icon">
-                    <img src="img/菜单.png" onclick="showB()">
-                </div>
-            </div>
             <div class="body">
-                <p onclick="showA()">桌面A</p>
+                <p>桌面A</p>
             </div>
         </div>
     </body>
