@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.js"></script>
+        <script>
+            const addRipple= function(e){
+                console.log(1)
+                let overlay = $("<span class='overlay'></span>")
+                const x = e.clientX - e.target.offsetLeft
+                const y = e.clientY - e.target.offsetTop;
+                overlay.css(
+                {
+                    left: x + 'px',
+                    top: y + 'px'
+                })
+            $(this).append(overlay)
+            setTimeout(() => {
+                overlay.remove()
+            }, 500)
+            }
+            $(document).ready(function () {
+                $('#btn').click(addRipple);
+            })
+        </script>
+        <title>Document</title>
+    </head>
+    <style>
+        .button {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            position: relative;
+            display: inline-block;
+            color: #fff;
+            padding: 14px 40px;
+            background: linear-gradient(90deg, #0bc7f1, #c471ed);
+            border-radius: 45px;
+            margin: 0 15px;
+            font-size: 24px;
+            font-weight: 400;
+            text-decoration: none;
+            overflow: hidden;
+            box-shadow: 1px 1px 3px #7459e9;
+        }
+        .overlay {
+            position: absolute;
+            height: 400px;
+            width: 400px;
+            background-color: yellow;
+            top: 0;
+            left: 0;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            opacity: .5;
+            animation: GreenDot .5s linear infinite;
+            -webkit-animation:GreenDot .5s linear infinite;
+        }
+
+       @keyframes blink{
+	    0%{
+		    opacity: 0;
+	    }
+	    50%{
+		    opacity: 100;
+	    }
+	    100%{
+		    opacity: 0;
+	    }
+        }
+        @-webkit-keyframes blink{
+	    0%{
+		    opacity: 0;
+	    }
+	    50%{
+		    opacity: 100;
+	    }
+	    100%{
+		    opacity: 0;
+	    }
+        }
+        @keyframes GreenDot {
+        0% {
+            transform: scale(0.5);
+            opacity: 1;
+        }
+        30% {
+            opacity: 1;
+        }
+        100% {
+            transform: scale(1.4);
+            opacity: 0;
+        }
+        }
+    </style>
+    <body>
+        <div id="btn" class="button">
+            Click me
+            <!-- <span class="overlay"></span> -->
+        </div>
+    </body>
+
+</html>
