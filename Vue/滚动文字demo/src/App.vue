@@ -1,25 +1,28 @@
 <template>
-  <div id="app">
-    <ul class="flex">
-      <ScrollNum
-        v-for="(number, idx) of numArr"
-        :key="idx"
-        :i="number"
-        :delay="idx + 2.5"
-        as="li"
-        class="num"
-      />
-    </ul>
-  </div>
+<!--  <div id="app">-->
+<!--    <ul class="flex">-->
+<!--      <ScrollNum-->
+<!--        v-for="(number, idx) of numArr"-->
+<!--        :key="idx"-->
+<!--        :i="number"-->
+<!--        :delay="idx + 2.5"-->
+<!--        as="li"-->
+<!--        class="num"-->
+<!--      />-->
+<!--    </ul>-->
+      <index-map />
+<!--  </div>-->
 </template>
 
 <script>
-import ScrollNum from "./components/ScrollNum";
+// import ScrollNum from "./components/ScrollNum";
+import IndexMap from "./components/indexMap";
 
 export default {
   name: "App",
   components: {
-    ScrollNum,
+      IndexMap,
+    // ScrollNum,
   },
   data: () => ({ num: 123456789 }),
   computed: {
