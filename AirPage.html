@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<!-- saved from url=(0021)http://air.nbemc.net/ -->
+<html class="no-js">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>宁波市空气质量实时发布平台</title>
+
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=0.3, maximum-scale=0.3, minimum-scale=0.3">
+    <meta name="renderer" content="webkit">
+
+    <link rel="stylesheet" href="./q111_files/common.css">
+    <link rel="stylesheet" href="./q111_files/master.css">
+    <link rel="stylesheet" href="./q111_files/iconfont.css">
+
+    <script src="./q111_files/hm.js"></script>
+    <script src="./q111_files/jquery.min.js"></script>
+    <style>
+        ::-webkit-scrollbar {
+            width: 5px;
+            height: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: #999;
+            -webkit-border-radius: 5px;
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:vertical:hover {
+            background-color: #666;
+        }
+
+        ::-webkit-scrollbar-thumb:vertical:active {
+            background-color: #333;
+        }
+
+        ::-webkit-scrollbar-button {
+            display: none;
+        }
+
+        ::-webkit-scrollbar-track {
+            background-color: #f1f1f1;
+        }
+    </style>
+
+    <script type="text/javascript" src="./q111_files/pagescroller.min.js"></script>
+    <script src="./q111_files/count.js"></script>
+
+    <style>
+        .aqi_jt {
+            -webkit-transition: all 0.9s linear;
+            -moz-transition: all 0.9s linear;
+            -o-transition: all 0.9s linear;
+            transition: all 0.9s linear;
+        }
+
+        .biaoqing {
+            animation: flying 3s linear infinite;
+            -webkit-animation: flying 3s linear infinite;
+            -moz-animation: flying 3s linear infinite;
+            -o-animation: flying 3s linear infinite;
+        }
+
+        @keyframes flying {
+            25% {
+                margin-top: -7px;
+            }
+
+            50% {
+                margin-top: 3px;
+            }
+
+            75% {
+                margin-top: 13px;
+            }
+
+            100% {
+                margin-top: 3px;
+            }
+        }
+
+        .biaoqing img {
+            -webkit-transition: all 0.9s linear;
+            -moz-transition: all 0.9s linear;
+            -o-transition: all 0.9s linear;
+            transition: all 0.9s linear;
+        }
+    </style>
+    <link href="./q111_files/foundation.min.css" rel="stylesheet">
+    <link href="./q111_files/all.css" rel="stylesheet">
+
+
+</head>
+
+<body onselectstart="return false" style="">
+    <div class="main main_index" id="divwarp">
+        <div class="swiper-slide-content">
+            <div id="main" style="position: relative;">
+                <div class="section section_2" style="position: relative; margin: 0px;">
+                    <div class="index_content1" id="section-2">
+
+                        <div class="clear"></div>
+                        <div class="area">
+                            <!-- <div class="arealeft">
+                                <div class="areamap">
+
+
+                                    <h2>更新时间：2021年11月26日 15时</h2>
+
+                                    <div class="ningbo">
+                                        <img src="./q111_files/state1.png">
+                                    </div>
+                                    <div class="areapop ningbo_areapop" style="display: none;width:160px;">
+                                        <p><span
+                                                style="font-weight:bold;font-size:16px;">宁波市</span><br>&nbsp;&nbsp;&nbsp;NO<sub>2</sub>浓度：
+                                            45 μg/m³</p>
+                                    </div>
+
+
+                                    <div class="haishu">
+                                        <img src="./q111_files/state1.png">
+                                    </div>
+                                    <div class="areapop haishu_areapop" style="display: none;width:160px;">
+                                        <p><span
+                                                style="font-weight:bold;font-size:16px;">海曙区</span><br>&nbsp;&nbsp;&nbsp;NO<sub>2</sub>浓度：
+                                            37 μg/m³</p>
+                                    </div>
+
+
+                                    <div class="jiangbei">
+                                        <img src="./q111_files/state1.png">
+                                    </div>
+                                    <div class="areapop jiangbei_areapop" style="display: none;width:160px;">
+                                        <p><span
+                                                style="font-weight:bold;font-size:16px;">江北区</span><br>&nbsp;&nbsp;&nbsp;NO<sub>2</sub>浓度：
+                                            45 μg/m³</p>
+                                    </div>
+
+
+                                    <div class="zhenhai">
+                                        <img src="./q111_files/state1.png">
+                                    </div>
+                                    <div class="areapop zhenhai_areapop" style="display: none;width:160px;">
+                                        <p><span
+                                                style="font-weight:bold;font-size:16px;">镇海区</span><br>&nbsp;&nbsp;&nbsp;NO<sub>2</sub>浓度：
+                                            48 μg/m³</p>
+                                    </div>
+
+
+                                    <div class="beilun">
+                                        <img src="./q111_files/state1.png">
+                                    </div>
+                                    <div class="areapop beilun_areapop" style="display: none;width:160px;">
+                                        <p><span
+                                                style="font-weight:bold;font-size:16px;">北仑区</span><br>&nbsp;&nbsp;&nbsp;NO<sub>2</sub>浓度：
+                                            64 μg/m³</p>
+                                    </div>
+
+
+                                    <div class="yuyao">
+                                        <img src="./q111_files/state1.png">
+                                    </div>
+                                    <div class="areapop yuyao_areapop" style="display: none;width:160px;">
+                                        <p><span
+                                                style="font-weight:bold;font-size:16px;">余姚市</span><br>&nbsp;&nbsp;&nbsp;NO<sub>2</sub>浓度：
+                                            44 μg/m³</p>
+                                    </div>
+
+
+                                    <div class="ninghai">
+                                        <img src="./q111_files/state1.png">
+                                    </div>
+                                    <div class="areapop ninghai_areapop" style="display: none;width:160px;">
+                                        <p><span
+                                                style="font-weight:bold;font-size:16px;">宁海县</span><br>&nbsp;&nbsp;&nbsp;NO<sub>2</sub>浓度：
+                                            28 μg/m³</p>
+                                    </div>
+
+
+                                    <div class="yinzhou">
+                                        <img src="./q111_files/state1.png">
+                                    </div>
+                                    <div class="areapop yinzhou_areapop" style="display: none;width:160px;">
+                                        <p><span
+                                                style="font-weight:bold;font-size:16px;">鄞州区</span><br>&nbsp;&nbsp;&nbsp;NO<sub>2</sub>浓度：
+                                            46 μg/m³</p>
+                                    </div>
+
+                                    <div class="xiangshan">
+                                        <img src="./q111_files/state1.png">
+                                    </div>
+                                    <div class="areapop xiangshan_areapop" style="display: none;width:160px;">
+                                        <p><span
+                                                style="font-weight:bold;font-size:16px;">象山县</span><br>&nbsp;&nbsp;&nbsp;NO<sub>2</sub>浓度：
+                                            42 μg/m³</p>
+                                    </div>
+
+                                    <div class="fenghua">
+                                        <img src="./q111_files/state1.png">
+                                    </div>
+                                    <div class="areapop fenghua_areapop" style="display: none;width:160px;">
+                                        <p><span
+                                                style="font-weight:bold;font-size:16px;">奉化区</span><br>&nbsp;&nbsp;&nbsp;NO<sub>2</sub>浓度：
+                                            48 μg/m³</p>
+                                    </div>
+
+                                    <div class="cixi">
+                                        <img src="./q111_files/state1.png">
+                                    </div>
+                                    <div class="areapop cixi_areapop" style="display: none;width:160px;">
+                                        <p><span
+                                                style="font-weight:bold;font-size:16px;">慈溪市</span><br>&nbsp;&nbsp;&nbsp;NO<sub>2</sub>浓度：
+                                            40 μg/m³</p>
+                                    </div>
+
+                                    <div class="gaoxin">
+                                        <img src="./q111_files/state1.png">
+                                    </div>
+                                    <div class="areapop gaoxin_areapop" style="display: none;width:160px;">
+                                        <p><span
+                                                style="font-weight:bold;font-size:16px;">高新区</span><br>&nbsp;&nbsp;&nbsp;NO<sub>2</sub>浓度：
+                                            42 μg/m³</p>
+                                    </div>
+
+                                    <div class="daxie">
+                                        <img src="./q111_files/state1.png">
+                                    </div>
+                                    <div class="areapop daxie_areapop" style="display: none;width:160px;">
+                                        <p><span
+                                                style="font-weight:bold;font-size:16px;">大榭开发区</span><br>&nbsp;&nbsp;&nbsp;NO<sub>2</sub>浓度：
+                                            42 μg/m³</p>
+                                    </div>
+
+                                    <div class="dongqianhu">
+                                        <img src="./q111_files/state1.png">
+                                    </div>
+                                    <div class="areapop dongqianhu_areapop" style="display: none;width:160px;">
+                                        <p><span
+                                                style="font-weight:bold;font-size:16px;">东钱湖旅游度假区</span><br>&nbsp;&nbsp;&nbsp;NO<sub>2</sub>浓度：
+                                            35 μg/m³</p>
+                                    </div>
+
+                                    <div class="hangzhouwan">
+                                        <img src="./q111_files/state1.png">
+                                    </div>
+                                    <div class="areapop hangzhouwan_areapop" style="display: none;width:160px;">
+                                        <p><span
+                                                style="font-weight:bold;font-size:16px;">杭州湾新区</span><br>&nbsp;&nbsp;&nbsp;NO<sub>2</sub>浓度：
+                                            35 μg/m³</p>
+                                    </div>
+
+                                    <script>
+                                        $(function () {
+                                            $(".areamap img").mouseover(function () {
+                                                $(".areamap .areapop").hide();
+                                                $(this).parent().next().show();
+                                            });
+                                            $(".areamap .areapop").mouseout(function () {
+                                                $(this).hide();
+                                            });
+                                        })
+                                    </script>
+                                </div>
+                                <div class="areatit">
+                                    <div class="tit1" id="ningbo_map">
+                                        <a href="javascript:void(0);" class="" onclick="ningboMap_aqi();">AQI</a>
+                                        <a href="javascript:void(0);" onclick="ningboMap_pollution(&#39;PM2.5&#39;)"
+                                            class="">PM<sub>2.5</sub></a>
+                                        <a href="javascript:void(0);" onclick="ningboMap_pollution(&#39;PM10&#39;)"
+                                            class="">PM<sub>10</sub></a>
+                                        <a href="javascript:void(0);" onclick="ningboMap_pollution(&#39;O3&#39;)"
+                                            class="">O<sub>3</sub></a>
+                                        <a href="javascript:void(0);" onclick="ningboMap_pollution(&#39;CO&#39;)"
+                                            class="">CO</a>
+                                        <a href="javascript:void(0);" onclick="ningboMap_pollution(&#39;SO2&#39;)"
+                                            class="">SO<sub>2</sub></a>
+                                        <a href="javascript:void(0);" onclick="ningboMap_pollution(&#39;NO2&#39;)"
+                                            class="active">NO<sub>2</sub></a>
+                                    </div>
+                                    <ul class="areass">
+                                        <li><span class="s1">&nbsp;</span>优</li>
+                                        <li><span class="s2">&nbsp;</span>良</li>
+                                        <li><span class="s3">&nbsp;</span>轻度污染</li>
+                                        <li><span class="s4">&nbsp;</span>中度污染</li>
+                                        <li><span class="s5">&nbsp;</span>重度污染</li>
+                                        <li><span class="s6">&nbsp;</span>严重污染</li>
+                                    </ul>
+                                </div>
+                            </div> -->
+                            <!-- <div class="arearight"> -->
+                            <div class="table-responsive">
+                                <table id="td1" class="table table-bordered table-hover" cellpadding="0"
+                                    cellspacing="0">
+                                    <thead id="sa-t1">
+                                        <tr>
+                                            <th>区域名称</th>
+                                            <th>PM<sub>2.5</sub></th>
+                                            <th>PM<sub>10</sub> </th>
+                                            <th>O<sub>3</sub></th>
+                                            <th>CO</th>
+                                            <th>SO<sub>2</sub></th>
+                                            <th>NO<sub>2</sub></th>
+                                            <th>实时指数</th>
+                                            <th>质量评价</th>
+                                            <th>首要污染物 </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+
+                                        <tr class="vcr-nd-bg">
+                                            <td>宁波市</td>
+                                            <td>65</td>
+                                            <td>107</td>
+                                            <td>140</td>
+                                            <td>0.6</td>
+                                            <td>20</td>
+                                            <td>47</td>
+                                            <td style="background:#FFFF00">88</td>
+                                            <td>良</td>
+                                            <td>PM<sub>2.5</sub></td>
+                                        </tr>
+                                        <tr class="vcr-nd-bg">
+                                            <td>海曙区</td>
+                                            <td>58</td>
+                                            <td>110</td>
+                                            <td>138</td>
+                                            <td>0.5</td>
+                                            <td>17</td>
+                                            <td>38</td>
+                                            <td style="background:#FFFF00">80</td>
+                                            <td>良</td>
+                                            <td>PM<sub>10</sub></td>
+                                        </tr>
+                                        <tr class="vcr-nd-bg">
+                                            <td>江北区</td>
+                                            <td>51</td>
+                                            <td>83</td>
+                                            <td>146</td>
+                                            <td>0.2</td>
+                                            <td>18</td>
+                                            <td>41</td>
+                                            <td style="background:#FFFF00">70</td>
+                                            <td>良</td>
+                                            <td>PM<sub>2.5</sub></td>
+                                        </tr>
+                                        <tr class="vcr-nd-bg">
+                                            <td>鄞州区</td>
+                                            <td>86</td>
+                                            <td>125</td>
+                                            <td>142</td>
+                                            <td>0.5</td>
+                                            <td>26</td>
+                                            <td>56</td>
+                                            <td style="background:#F3763C">114</td>
+                                            <td>轻度污染</td>
+                                            <td>PM<sub>2.5</sub></td>
+                                        </tr>
+                                        <tr class="vcr-nd-bg">
+                                            <td>北仑区</td>
+                                            <td>53</td>
+                                            <td>115</td>
+                                            <td>128</td>
+                                            <td>0.6</td>
+                                            <td>17</td>
+                                            <td>56</td>
+                                            <td style="background:#FFFF00">83</td>
+                                            <td>良</td>
+                                            <td>PM<sub>10</sub></td>
+                                        </tr>
+                                        <tr class="vcr-nd-bg">
+                                            <td>镇海区</td>
+                                            <td>57</td>
+                                            <td>110</td>
+                                            <td>134</td>
+                                            <td>0.7</td>
+                                            <td>17</td>
+                                            <td>47</td>
+                                            <td style="background:#FFFF00">80</td>
+                                            <td>良</td>
+                                            <td>PM<sub>10</sub></td>
+                                        </tr>
+                                        <tr class="vcr-nd-bg">
+                                            <td>奉化区</td>
+                                            <td>64</td>
+                                            <td>113</td>
+                                            <td>109</td>
+                                            <td>0.5</td>
+                                            <td>18</td>
+                                            <td>45</td>
+                                            <td style="background:#FFFF00">87</td>
+                                            <td>良</td>
+                                            <td>PM<sub>2.5</sub></td>
+                                        </tr>
+                                        <tr class="vcr-nd-bg">
+                                            <td>慈溪市</td>
+                                            <td>76</td>
+                                            <td>142</td>
+                                            <td>120</td>
+                                            <td>0.6</td>
+                                            <td>14</td>
+                                            <td>65</td>
+                                            <td style="background:#F3763C">102</td>
+                                            <td>轻度污染</td>
+                                            <td>PM<sub>2.5</sub></td>
+                                        </tr>
+                                        <tr class="vcr-nd-bg">
+                                            <td>余姚市</td>
+                                            <td>74</td>
+                                            <td>120</td>
+                                            <td>112</td>
+                                            <td>0.6</td>
+                                            <td>18</td>
+                                            <td>58</td>
+                                            <td style="background:#FFFF00">99</td>
+                                            <td>良</td>
+                                            <td>PM<sub>2.5</sub></td>
+                                        </tr>
+                                        <tr class="vcr-nd-bg">
+                                            <td>象山县</td>
+                                            <td>48</td>
+                                            <td>70</td>
+                                            <td>117</td>
+                                            <td>0.5</td>
+                                            <td>10</td>
+                                            <td>38</td>
+                                            <td style="background:#FFFF00">67</td>
+                                            <td>良</td>
+                                            <td>PM<sub>2.5</sub></td>
+                                        </tr>
+                                        <tr class="vcr-nd-bg">
+                                            <td>宁海县</td>
+                                            <td>34</td>
+                                            <td>75</td>
+                                            <td>137</td>
+                                            <td>0.4</td>
+                                            <td>12</td>
+                                            <td>27</td>
+                                            <td style="background:#FFFF00">63</td>
+                                            <td>良</td>
+                                            <td>PM<sub>10</sub></td>
+                                        </tr>
+                                        <tr class="vcr-nd-bg">
+                                            <td>高新区</td>
+                                            <td>62</td>
+                                            <td>103</td>
+                                            <td>142</td>
+                                            <td>0.7</td>
+                                            <td>21</td>
+                                            <td>42</td>
+                                            <td style="background:#FFFF00">84</td>
+                                            <td>良</td>
+                                            <td>PM<sub>2.5</sub></td>
+                                        </tr>
+                                        <tr class="vcr-nd-bg">
+                                            <td>大榭开发区</td>
+                                            <td>49</td>
+                                            <td>95</td>
+                                            <td>132</td>
+                                            <td>0.6</td>
+                                            <td>19</td>
+                                            <td>39</td>
+                                            <td style="background:#FFFF00">73</td>
+                                            <td>良</td>
+                                            <td>PM<sub>10</sub></td>
+                                        </tr>
+                                        <tr class="vcr-nd-bg">
+                                            <td>东钱湖旅游度假区</td>
+                                            <td>65</td>
+                                            <td>87</td>
+                                            <td>150</td>
+                                            <td>0.6</td>
+                                            <td>19</td>
+                                            <td>42</td>
+                                            <td style="background:#FFFF00">88</td>
+                                            <td>良</td>
+                                            <td>PM<sub>2.5</sub></td>
+                                        </tr>
+                                        <tr class="vcr-nd-bg">
+                                            <td>杭州湾新区</td>
+                                            <td>81</td>
+                                            <td>108</td>
+                                            <td>109</td>
+                                            <td>0.6</td>
+                                            <td>18</td>
+                                            <td>54</td>
+                                            <td style="background:#F3763C">108</td>
+                                            <td>轻度污染</td>
+                                            <td>PM<sub>2.5</sub></td>
+                                        </tr>
+
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!-- </div> -->
+                        </div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="clear"></div>
+
+
+    </div>
+
+
+
+
+
+
+    <!--echarts-start-->
+    <script type="text/javascript" src="./q111_files/echarts.min.js"></script>
+    <script type="text/javascript" src="./q111_files/echarts-gl.min.js"></script>
+    <script type="text/javascript" src="./q111_files/ecStat.min.js"></script>
+    <script type="text/javascript" src="./q111_files/dataTool.min.js"></script>
+    <script type="text/javascript" src="./q111_files/china.js"></script>
+    <script type="text/javascript" src="./q111_files/world.js"></script>
+    <script type="text/javascript" src="./q111_files/bmap.min.js"></script>
+    <script type="text/javascript" src="./q111_files/simplex.js"></script>
+    <!--end-start-->
+    <!--鼠标星星js-start-->
+    <script src="./q111_files/jquery.main.js"></script>
+    <script type="text/javascript" src="./q111_files/jquery-stars.js"></script>
+    <script type="text/javascript" src="./q111_files/smothscrool.js"></script>
+    <script src="./q111_files/highlight.min.js"></script>
+    <!--鼠标星星js-end-->
+
+
+    <script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?283af3790c8d193b61a81ec900cb3cab";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+
+        function ToSub(sub) {
+            var result = sub.replace("PM2.5", "PM<SUB>2.5</SUB>")
+                .replace("PM10", "PM<SUB>10</SUB>")
+                .replace("NO2", "NO<SUB>2</SUB>")
+                .replace("SO2", "SO<SUB>2</SUB>")
+                .replace("O3", "O<SUB>3</SUB>");
+            return result;
+        }
+    </script>
+
+</body>
+
+</html>
