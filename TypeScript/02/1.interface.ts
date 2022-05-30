@@ -20,21 +20,21 @@ let p1: Point = {
 }
 
 p1[1] = 100;
-p1.m="22";
+p1.m = "22";
 
 //普通写法
-function fn1(x: number, y: number) :number {
+function fn11(x: number, y: number): number {
     return x + y;
 }
-function fn2(x: number, y: number) :number {
+function fn2(x: number, y: number): number {
     return x + y;
 }
 
 //接口
-interface IFnumber{
-    (x: number, y: number):number
+interface IFnumber {
+    (x: number, y: number): number
 }
 
-let fn3:IFnumber = function(a:number, b:number):number {
-    return a+b;
+let fn3: IFnumber = function (a: number, b: number): number {
+    return a + b;
 }
