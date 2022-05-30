@@ -4,8 +4,8 @@
 let deck1 = {
     suits: ["hearts", "spades", "clubs", "diamonds"],
     cards: Array(52),
-    createCardPicker: function() {
-        return function() {
+    createCardPicker: function () {
+        return function () {
             let pickedCard = Math.floor(Math.random() * 52);
             let pickedSuit = Math.floor(pickedCard / 13);
             //可以看到createCardPicker是个函数，并且它又返回了一个函数。
@@ -15,7 +15,7 @@ let deck1 = {
             // （注意：在严格模式下， this为undefined而不是window）。
 
             // 打开下方
-            // return {suit: this.suits[pickedSuit], card: pickedCard % 13};
+            // return { suit: this.suits[pickedSuit], card: pickedCard % 13 };
         }
     }
 }
@@ -29,13 +29,13 @@ let pickedCard1 = cardPicker1();
 let deck2 = {
     suits: ["hearts", "spades", "clubs", "diamonds"],
     cards: Array(52),
-    createCardPicker: function() {
+    createCardPicker: function () {
         // NOTE: the line below is now an arrow function, allowing us to capture 'this' right here
         return () => {
             let pickedCard = Math.floor(Math.random() * 52);
             let pickedSuit = Math.floor(pickedCard / 13);
 
-            return {suit: this.suits[pickedSuit], card: pickedCard % 13};
+            return { suit: this.suits[pickedSuit], card: pickedCard % 13 };
         }
     }
 }
@@ -59,12 +59,12 @@ let deck: Deck = {
     suits: ["hearts", "spades", "clubs", "diamonds"],
     cards: Array(52),
     // NOTE: The function now explicitly specifies that its callee must be of type Deck
-    createCardPicker: function(this: Deck) {
+    createCardPicker: function (this: Deck) {
         return () => {
             let pickedCard = Math.floor(Math.random() * 52);
             let pickedSuit = Math.floor(pickedCard / 13);
 
-            return {suit: this.suits[pickedSuit], card: pickedCard % 13};
+            return { suit: this.suits[pickedSuit], card: pickedCard % 13 };
         }
     }
 }

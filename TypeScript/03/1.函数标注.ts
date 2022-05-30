@@ -1,5 +1,5 @@
 
 
-function fn1(a:string):string {
+function fn1(a: string): string {
     return '';
 }

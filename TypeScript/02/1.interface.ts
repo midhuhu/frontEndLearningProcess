@@ -23,9 +23,6 @@ p1[1] = 100;
 p1.m = "22";
 
 //普通写法
-function fn11(x: number, y: number): number {
-    return x + y;
-}
 function fn2(x: number, y: number): number {
     return x + y;
 }

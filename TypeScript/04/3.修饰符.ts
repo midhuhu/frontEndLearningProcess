@@ -7,37 +7,37 @@
 
 class People {
     constructor(
-        readonly id:number,
-        protected username:string,
-        private psd:string
+        readonly id: number,
+        protected username: string,
+        private psd: string
     ) {
         //......
     }
 
     //寄存器 set get
-    set password(psd:string){
-        if (psd.length>=6){
+    set password(psd: string) {
+        if (psd.length >= 6) {
             this.psd = psd;
         }
     }
-    get password():string{
+    get password(): string {
         return this.psd;
     }
-    method1(){
+    method1() {
         this.id;
         this.username;
         this.psd;
     }
-    console(){
+    console() {
         console.log(`${this.id},${this.username},${this.psd}`)
     }
 }
 
-let people1 = new People(1,"2","3")
+let people1 = new People(1, "2", "3")
 // people1.id = 1;
 // people1.username="22";
 // people1.psd;
 people1.console()
-people1.password='498814'
+people1.password = '498814'
 console.log(people1.password);
 people1.console()
