@@ -1,10 +1,10 @@
-// 1
+// 1 类型声明
 const user_n: { name: string, age: number } = {
     name: 'trao',
     age: 15
 }
 
-// 2
+// 2 接口声明
 interface user_i {
     name: string,
     age: number,
@@ -24,7 +24,7 @@ class UserAccount {
 }
 const user_c: user_i = new UserAccount('bob', 1)
 
-// 3
+// 3 接口声明可以写多次，会合并
 interface People_n {
     name: string,
     age: number,
@@ -33,7 +33,7 @@ interface People_n {
     store: number
 }
 
-// 
+// 接口声明可以继承自类
 interface People_m extends UserAccount {
     store: number
 }
