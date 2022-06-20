@@ -59,3 +59,7 @@ buck-out/
 
 # CocoaPods
 /ios/Pods/
+
+
+# vue-test
+Vue/16/vue-test
